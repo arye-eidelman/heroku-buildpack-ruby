@@ -100,7 +100,7 @@ WARNING
       post_bundler
       create_database_yml
       install_binaries
-      puts "#{__FILE__}:#{__LINE__} started run_assets_precompile_rake_task"
+      puts "#{__FILE__}:#{__LINE__} completed run_assets_precompile_rake_task"
       run_assets_precompile_rake_task
       puts "#{__FILE__}:#{__LINE__} completed run_assets_precompile_rake_task"
     end
@@ -1086,7 +1086,7 @@ params = CGI.parse(uri.query || "")
 
   def run_assets_precompile_rake_task
 
-    precompile = rake.task("assets:precompile")
+    precompile = rake.task("assets:precompile --trace")
     return true unless precompile.is_defined?
 
     topic "Precompiling assets"

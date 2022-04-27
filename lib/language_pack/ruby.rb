@@ -101,6 +101,7 @@ WARNING
       create_database_yml
       install_binaries
       run_assets_precompile_rake_task
+      puts "#{__FILE__}:#{__LINE__} completed run_assets_precompile_rake_task"
     end
     config_detect
     best_practice_warnings

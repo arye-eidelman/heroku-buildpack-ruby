@@ -100,6 +100,7 @@ WARNING
       post_bundler
       create_database_yml
       install_binaries
+      puts "#{__FILE__}:#{__LINE__} started run_assets_precompile_rake_task"
       run_assets_precompile_rake_task
       puts "#{__FILE__}:#{__LINE__} completed run_assets_precompile_rake_task"
     end

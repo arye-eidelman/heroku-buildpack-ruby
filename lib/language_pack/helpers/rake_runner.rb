@@ -82,7 +82,7 @@ class LanguagePack::Helpers::RakeRunner
   end
 
   def load_rake_tasks(options = {})
-    @rake_tasks        ||= RakeTask.new("-P --trace").invoke(options.merge(quiet: true)).output
+    @rake_tasks        ||= RakeTask.new("-P --trace").invoke(options.merge(quiet: false)).output
     @rakefile_can_load ||= $?.success?
     @rake_tasks
   end
